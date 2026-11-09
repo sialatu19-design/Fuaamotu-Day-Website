@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Registration and Schedule</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:green;color:#243047;line-height:1.6}
+header{background:linear-gradient(135deg,#123b68,#2877a8);color:white;text-align:center;padding:45px 20px}
+header h1{font-size:2.2rem;margin-bottom:10px}
+nav{background:yellow;text-align:center;padding:12px}
+nav a{color:maroon;text-decoration:none;margin:0 14px;font-weight:bold}
+nav a:hover{text-decoration:underline}
+main{max-width:1050px;margin:28px auto;padding:0 18px}
+section{background:white;padding:25px;margin-bottom:24px;border-radius:12px;box-shadow:0 4px 14px #142d4b14}
+h2{color:#174f7a;margin-bottom:15px}
+.event-details{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.detail{background:#eaf3fb;border-left:4px solid #2877a8;padding:12px 15px;flex:1 1 190px;border-radius:5px}
+table{width:100%;border-collapse:collapse;margin-top:12px}
+th,td{padding:13px;text-align:left;border-bottom:1px solid #dce3ec}
+th{background:#174f7a;color:white}
+tr:nth-child(even){background:#f5f8fc}
+form{display:grid;gap:14px}
+label{font-weight:bold}
+input,select,textarea{width:100%;padding:11px;border:1px solid #b9c6d5;border-radius:6px;font-size:1rem;margin-top:5px}
+button{background:#19734a;color:white;border:0;border-radius:6px;padding:13px 18px;font-size:1rem;font-weight:bold;cursor:pointer}
+button:hover{background:#125c39}
+#confirmation{display:none;margin-top:15px;padding:12px;background:#e5f6eb;color:#145b32;border-radius:6px}
+footer{background:#0d2947;color:white;text-align:center;padding:20px;margin-top:35px}
+
+.video-container{position:relative;width:100%;max-width:850px;margin:18px auto 0;aspect-ratio:16/9;background:#111;border-radius:10px;overflow:hidden}
+.video-container video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000}
+@media(max-width:650px){header h1{font-size:1.7rem}nav a{display:inline-block;margin:5px 8px}section{padding:18px}table{font-size:.88rem}th,td{padding:8px}}
+</style>
+</head>
+<body>
+<header>
+<h1>WELCOME TO FUAAMOTU DAY EVENT 2026</h1>
+<p>Connect • Celebrate • Share • Feast</p>
+<p>Join us for a day of celabration, fun, and community activities!</p>
+<img src="fuaamotu.jpg" style="width:50%; height:2%;">
+</header>
+<nav>
+<a href="#about">About</a><a href="#event-video">Event Video</a><a href="#schedule">Schedule</a><a href="#register">Register</a>
+</nav>
+<main>
+<section id="about">
+<h2>About the Event</h2>
+<p>Welcome to Fua'amotu Day!
+
+Fua'amotu Day is a special occasion for our community to come together, celebrate our culture, share our talents, and strengthen the bonds that unite us.
+ This exciting event provides an opportunity for families, friends, and community members to enjoy fun activities, traditional performances,food,and entertainment. 
+ It is also a time to appreciate our community's identity, promote unity, and create beautiful memories together. Everyone is welcome to join us for a day filled with joy, laughter, and community spirit.
+ Let's celebrate Fua'amotu and make this day unforgettable!!</p>
+<div class="event-details">
+<div class="detail"><strong>Date:</strong><br>21 November 2026</div>
+<div class="detail"><strong>Time:</strong><br>9:00 AM – 3:00 PM</div>
+<div class="detail"><strong>Location:</strong><br>Hoosi Tea, Fua'amotu</div>
+<div class="detail"><strong>Entry:</strong><br>Free</div>
+</div>
+</section>
+<section id="event-video">
+<h2>Watch Our Event Video</h2>
+<p>Enjoy this video and get ready to celebrate Fua'amotu Day!</p>
+<div class="video-container">
+  <video controls playsinline preload="metadata">
+    <source src="fuaamotu-event-video.mp4" type="video/mp4">
+    Your browser does not support HTML5 video. Please use a current version of Chrome or Edge.
+  </video>
+</div>
+</section>
+<section id="schedule">
+<h2>Event Schedule</h2><p>Here is the plan for the day.</p>
+<table>
+<thead><tr><th>Time</th><th>Activity</th><th>Details</th></tr></thead>
+<tbody>
+<tr><td>9:00 AM</td><td>Registration</td><td>Welcome and check-in</td></tr>
+<tr><td>9:30 AM</td><td>Opening Ceremony</td><td>Welcome speech and prayer</td></tr>
+<tr><td>10:00 AM</td><td>Learning Workshop</td><td>Team learning activities</td></tr>
+<tr><td>12:00 PM</td><td>Lunch Break</td><td>Food and refreshments</td></tr>
+<tr><td>1:00 PM</td><td>Games and Activities</td><td>Fun group challenges</td></tr>
+<tr><td>2:30 PM</td><td>Closing Ceremony</td><td>Thank-you messages and farewell</td></tr>
+</tbody>
+</table>
+</section>
+<section id="register">
+<h2>Event Registration Form</h2><p>Complete the form below to register for the event.</p>
+<form id="registrationForm">
+<div><label for="fullname">Full Name</label><input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required></div>
+<div><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="Enter your email address" required></div>
+<div><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required></div>
+<div><label for="attendance">How will you attend?</label><select id="attendance" name="attendance" required><option value="">Choose an option</option><option value="In person">In person</option><option value="Online">Online</option></select></div>
+<div><label for="message">Questions or Comments (optional)</label><textarea id="message" name="message" rows="3" placeholder="Write a message here"></textarea></div>
+<button type="submit">Register Now</button>
+</form>
+<p id="confirmation" role="status" aria-live="polite"></p>
+</section>
+</main>
+<footer><p>&copy; 2026 Fuaamotu Day | Event Registration Website</p></footer>
+<script>
+const form = document.getElementById("registrationForm");
+const confirmation = document.getElementById("confirmation");
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  const name = document.getElementById("fullname").value.trim();
+  confirmation.textContent = "Thank you, " + name + "! Your form has been completed. This demo does not send or save registrations.";
+  confirmation.style.display = "block";
+  form.reset();
+});
+</script>
+</body>
+</html>
